@@ -4,6 +4,7 @@ import { Route, Redirect } from 'react-router-dom'
 import { auth } from './../firebase-config'
 import AdminMenu from './AdminMenu'
 import AdminPortifolio from './AdminPortifolio'
+import AdminServicos from './AdminServicos'
 
 class Admin extends Component {
     constructor(props) {
@@ -46,7 +47,9 @@ class Admin extends Component {
             <div style={{ padding: '50px' }}>
                 <h2>Painel Administrativo</h2>
                 <Route path={'/'} component={AdminMenu} />
-                <Route path={`${this.props.match.url}/portifolio`} component={AdminPortifolio} />
+                <Route path={`${this.props.match.url}/vendas`} component={AdminPortifolio} />
+                <Route path={`${this.props.match.url}/servicos`} component={AdminServicos} />
+
             </div>
         )
     }

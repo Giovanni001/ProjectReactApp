@@ -31,7 +31,7 @@ class Vendas extends Component {
                         <h4>O que nós vendemos </h4>
                         <div className='row text-center '>
                             
-                            {   /*Dentro de portifolio nosp odemos acessar as suas chaves, com isso
+                            {   /*Dentro de portifolio nos podemos acessar as suas chaves, com isso
                                 é possivel usar um loop para percorrer as mesmas e com isso exibir cada
                                 chave com seu respectivo conteudo do componente Portifolio
                                 
