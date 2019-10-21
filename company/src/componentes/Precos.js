@@ -6,25 +6,25 @@ const Precos = props => {
             {/* Container (Pricing Section) */}
             <div id='pricing' className='container-fluid'>
                 <div className='text-center'>
-                    <h2>Pricing</h2>
-                    <h4>Choose a payment plan that works for you</h4>
+                    <h2>Preços</h2>
+                    <h4>Escolha um plano de pagamento</h4>
                 </div>
                 <div className='row '>
                     <div className='col-sm-4 col-xs-12'>
                         <div className='panel panel-default text-center'>
                             <div className='panel-heading'>
-                                <h1>Basic</h1>
+                                <h1>Basico</h1>
                             </div>
                             <div className='panel-body'>
-                                <p><strong>20</strong> Lorem</p>
-                                <p><strong>15</strong> Ipsum</p>
-                                <p><strong>5</strong> Dolor</p>
-                                <p><strong>2</strong> Sit</p>
-                                <p><strong>Endless</strong> Amet</p>
+                                <p><strong>20</strong> XXXX</p>
+                                <p><strong>15</strong> XXX</p>
+                                <p><strong>5</strong> XX</p>
+                                <p><strong>2</strong> X</p>
+                                <p><strong>Endless</strong> X</p>
                             </div>
                             <div className='panel-footer'>
                                 <h3>$19</h3>
-                                <h4>per month</h4>
+                                <h4>Por mês</h4>
                                 <button className='btn btn-lg'>Sign Up</button>
                             </div>
                         </div>
@@ -35,15 +35,15 @@ const Precos = props => {
                                 <h1>Pro</h1>
                             </div>
                             <div className='panel-body'>
-                                <p><strong>50</strong> Lorem</p>
-                                <p><strong>25</strong> Ipsum</p>
-                                <p><strong>10</strong> Dolor</p>
-                                <p><strong>5</strong> Sit</p>
+                                <p><strong>50</strong> XXXX</p>
+                                <p><strong>25</strong> XXX</p>
+                                <p><strong>10</strong> XX</p>
+                                <p><strong>5</strong> X</p>
                                 <p><strong>Endless</strong> Amet</p>
                             </div>
                             <div className='panel-footer'>
                                 <h3>$29</h3>
-                                <h4>per month</h4>
+                                <h4>Por mêS</h4>
                                 <button className='btn btn-lg'>Sign Up</button>
                             </div>
                         </div>
@@ -54,15 +54,15 @@ const Precos = props => {
                                 <h1>Premium</h1>
                             </div>
                             <div className='panel-body'>
-                                <p><strong>100</strong> Lorem</p>
-                                <p><strong>50</strong> Ipsum</p>
-                                <p><strong>25</strong> Dolor</p>
-                                <p><strong>10</strong> Sit</p>
+                                <p><strong>100</strong> XXXX</p>
+                                <p><strong>50</strong> XXX</p>
+                                <p><strong>25</strong> XX</p>
+                                <p><strong>10</strong> X</p>
                                 <p><strong>Endless</strong> Amet</p>
                             </div>
                             <div className='panel-footer'>
                                 <h3>$49</h3>
-                                <h4>per month</h4>
+                                <h4>Por mês</h4>
                                 <button className='btn btn-lg'>Sign Up</button>
                             </div>
                         </div>

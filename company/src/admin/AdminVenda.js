@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import config, { storage } from './../firebase-config'
+import config, { storage } from '../firebase-config'
 
-class AdminPortifolio extends Component {
+class AdminVenda extends Component {
     constructor(props) {
         super(props)
 
@@ -10,20 +10,21 @@ class AdminPortifolio extends Component {
         }
 
         //ele é necessario para garantir o escopo se torne global, ou seja, que outras funções tenham acesso
-        this.gravaPortifolio = this.gravaPortifolio.bind(this)
+        this.gravaVenda = this.gravaVenda.bind(this)
     }
 
-    gravaPortifolio(e) {
-        const itemPortifolio = {
+    gravaVenda(e) {
+        const itemVenda = {
             titulo: this.titulo.value,
             descricao: this.descricao.value,
-            imagem: this.imagem
+            imagem: this.imagem,
         }
 
         this.setState({ estaGravando: true })
 
+        //Uma lista de arquivos que ele pode receber
         //pegando a primeira imagem da lista de arquivos que o file retornou
-        const arquivo = itemPortifolio.imagem.files[0]
+        const arquivo = itemVenda.imagem.files[0]
         const { name, size, type } = arquivo
         console.log(name, size, type)
 
@@ -37,16 +38,16 @@ class AdminPortifolio extends Component {
                 //estou imprimindo o link do que foi gerado do objeto getDonwloadURL
                 //console.log(downloadURL)
 
-                const novoPortifolio = {
-                    titulo: itemPortifolio.titulo,
-                    descricao: itemPortifolio.descricao,
-                    imagem: downloadURL
+                const novaVenda = {
+                    titulo: itemVenda.titulo,
+                    descricao: itemVenda.descricao,
+                    imagem: downloadURL,
                 }
 
                 //colocando dentro do portifolio que foi criado do fire base o novo objeto
-                config.push('portifolio', {
-                    //o dado que vai ser passado é o novoPortifolio (data=dado)
-                    data: novoPortifolio
+                config.push('vendas', {
+                    //o dado que vai ser passado é o novaVenda (data=dado)
+                    data: novaVenda
                 })
 
                 this.setState({ estaGravando: false })
@@ -60,8 +61,8 @@ class AdminPortifolio extends Component {
     render() {
         if (this.state.estaGravando) {
             return (
-                <div className='alert alert-primary'>
-                    <p>Aguarde...</p>
+                <div className="spinner-border text-dark" role="status">
+                    <span className="sr-only">Carregando...</span>
                 </div>
             )
         }
@@ -69,7 +70,7 @@ class AdminPortifolio extends Component {
         return (
 
             <div>
-                <form onSubmit={this.gravaPortifolio}>
+                <form onSubmit={this.gravaVenda}>
                     <div className="form-group">
                         <label htmlFor="exampleInputEmail1">Titulo</label>
                         {/*gravando a referencia do input titulo no this.titulo, ou seja quando o usuario enviar o formulario, ele pegara o dado que foi inserido no campo titulo e enviara ao backend*/}
@@ -91,4 +92,4 @@ class AdminPortifolio extends Component {
     }
 }
 
-export default AdminPortifolio
+export default AdminVenda

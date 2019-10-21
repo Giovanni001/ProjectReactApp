@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import config from '../firebase-config'
-import ItemPortifolio from './ItemPortifolio'
+import ItemVenda from './ItemVenda'
 
 class Vendas extends Component {
     constructor(props) {
@@ -8,16 +8,16 @@ class Vendas extends Component {
 
         //criando um estado do componente Portifolio e add no fire base
         this.state = {
-            portifolio: {
+            vendas: {
                 titulo: 'Paris',
-                descricao: 'Cidade luz'
+                descricao: 'Cidade luz',
             }
         }
 
         //sincronizando o portifolio criado com o bd
-        config.syncState('portifolio', {
+        config.syncState('vendas', {
             context: this,
-            state: 'portifolio',
+            state: 'vendas',
             asArray: false
         })
     }
@@ -38,9 +38,9 @@ class Vendas extends Component {
                                 Comando que retorna as chaves:
                                 <p>{JSON.stringify(Object.keys(this.state.portifolio))}</p>*/
 
-                                Object.keys(this.state.portifolio)
+                                Object.keys(this.state.vendas)
                                 .map(key => {
-                                    return <ItemPortifolio key={key} conteudo={this.state.portifolio[key]}/>
+                                    return <ItemVenda key={key} conteudo={this.state.vendas[key]}/>
                                 })
                             }
                            

@@ -1,10 +1,10 @@
 import React from 'react'
 
-const ItemPortifolio = props => {
+const ItemVenda = props => {
     return (
         <div className='col-sm-4'>
             <div className='thumbnail'>
-                <img src={props.conteudo.imagem} width='400' height='300' />
+                <img src={props.conteudo.imagem} className='imgTamanho'/>
                <p><strong>{props.conteudo.titulo}</strong></p>
                <p>{props.conteudo.descricao}</p>
             </div>
@@ -12,4 +12,4 @@ const ItemPortifolio = props => {
     )
 }
 
-export default ItemPortifolio
+export default ItemVenda

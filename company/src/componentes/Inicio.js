@@ -1,4 +1,5 @@
 import React from 'react'
+import img from '../book.jpg'
 
 const Inicio = props => {
     return (
@@ -11,27 +12,15 @@ const Inicio = props => {
                         <h4>Look Book é um aplicativo que conecta pessoas a vendedores que estão dispostos a venderem
                             seus livros de uma forma diferente e intuitiva.</h4><br />
                         <p></p>
-                        {/* <br /><button className='btn btn-default btn-lg'>Get in Touch</button> */}
                     </div>
-                    {/* <div className='col-sm-4'>
-                        <span className='glyphicon glyphicon-signal logo'></span>
-                    </div> */}
                 </div>
             </div>
-{/* 
-            <div className='container-fluid bg-grey'>
-                <div className='row'>
-                    <div className='col-sm-4'>
-                        <span className='glyphicon glyphicon-globe logo '></span>
-                    </div>
-                    <div className='col-sm-8'>
-                        <h2>Our Values</h2><br />
-                        <h4><strong>MISSION:</strong> Our mission lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4><br />
-                        <p><strong>VISION:</strong> Our vision Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    </div>
-                </div>
-            </div> */}
+            <div className="jumbotron">
+                <h1 className="display-4">O amor a arte da leitura !</h1>
+                <p className="lead">Use o nosso site para se conectar a seus livros mais cobiçados e adquira-os de forma rapida e pratica.</p>
+                <hr className="my-4" />
+            </div>
+
         </div>
     )
 }
